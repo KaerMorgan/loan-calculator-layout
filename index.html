@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="author" content="Филатов Данил">
+  <title>Loan calculator</title>
+</head>
+
+<body>
+
+  <main class="main">
+
+    <section class="calc">
+      <div class="inputs">
+
+        <h1 class="inputs__title">Калькулятор займа под ПТС</h1>
+
+        <div class="btn-container">
+          <p>Тип платежа</p>
+          <div class="inputs__button-group">
+            <button class="button_payment button_payment-left toggle-left" onclick="toggleLeft()">Дифференцированный</button>
+            <button class="button_payment button_payment-right" onclick="toggleRight()">Аннуитетный</button>
+          </div>
+        </div>
+
+        <div class="input__group">
+
+          <div class="input__text-group">
+            <p class="input__slider-title">Сумма займа</p>
+            <p class="output_sum">138100 &#8381;</p>
+          </div>
+
+          <div class="slide-container">
+            <input type="range" min="15000" max="1000000" step="100" value="138100" class="slider slider-sum" id="slider-sum" oninput="range1()">
+          </div>
+
+          <div class=" input__text-group">
+            <p class="input__info">от 15 000 &#8381;</p>
+            <p class="input__info">до 1 000 000 &#8381;</p>
+          </div>
+
+        </div>
+
+        <div class="input__group">
+
+          <div class="input__text-group">
+            <p class="input__slider-title">Срок займа</p>
+            <p class="output_month">8 месяцев</p>
+          </div>
+
+          <div class="slide-container">
+            <input type="range" min="2" max="12" step="1" value="8" class="slider slider-month" id="slider-month" oninput="range2()">
+          </div>
+
+          <div class="input__text-group">
+            <p class="input__info">от 2 месяца</p>
+            <p class="input__info">до 12 месяцев</p>
+          </div>
+
+        </div>
+
+        <p class="inputs__caption">Условия выдачи займа могут отличаться, исходя из анализа документов и состояния вашего автомобиля</p>
+
+      </div>
+
+      <div class="values">
+
+        <div class="values__group">
+          <h3 class="values__subtitle">Ставка</h3>
+          <p class="values__digits">2.7%</p>
+        </div>
+
+        <div class="values__group">
+          <h3 class="values__subtitle">Ежемесячный платёж</h3>
+          <p class="values__digits">3 729 &#8381;</p>
+        </div>
+
+        <div class="values__container">
+          <button class="values__submit">Подать заявку</button>
+          <p class="values__caption">Расчет займа предварительный</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
